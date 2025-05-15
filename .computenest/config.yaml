@@ -10,28 +10,28 @@ Service:
           ArtifactId: ${Artifact.Artifact_1.ArtifactId}
           ArtifactVersion: ${Artifact.Artifact_1.ArtifactVersion}
     TemplateConfigs:
-      - Name: ECS单机版
-        Url: 'ros_templates/template.yaml'
-        ArchitectureDiagramUrl: 'docs/architecture.png'
-        AllowedRegions:
-          - cn-hangzhou
+    - Name: ECS单机版
+      Url: 'ros_templates/template.yaml'
+      ArchitectureDiagramUrl: 'docs/architecture.png'
+      AllowedRegions:
+      - cn-hangzhou
   ServiceType: private
   OperationMetadata:
     ModifyParametersConfig:
-      - TemplateName: ECS单机版
-        Operation:
-          - Name: 变配ECS实例规格
-            Description: 变配ECS实例规格
-            Type: Custom
-            SupportPredefinedParameters: false
-            EnableLogging: false
-            Parameters:
-              - EcsInstanceType
+    - TemplateName: ECS单机版
+      Operation:
+      - Name: 变配ECS实例规格
+        Description: 变配ECS实例规格
+        Type: Custom
+        SupportPredefinedParameters: false
+        EnableLogging: false
+        Parameters:
+        - EcsInstanceType
   ServiceInfo:
-    Locale: zh-CN
+  - Locale: zh-CN
     ShortDescription: spring boot demo
-    Image: 'resources/icons/service_logo.png'
-    Name: SpringBoot单机版(docker版)
+    Image: resources/icons/service_logo.png
+    Name: SpringBoot单机版(docker版)-lyh
   ShareType: Public
   ApprovalType: Manual
 Artifact:
